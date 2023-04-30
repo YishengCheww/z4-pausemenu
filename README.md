@@ -7,4 +7,4 @@ Preview:
 
 
 
-this is same as the st4lth pausemenu but added blur effect.
+this is same as the st4lth pausemenu but added blur effect and better display for map.
