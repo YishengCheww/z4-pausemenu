@@ -27,8 +27,14 @@ RegisterNUICallback('Resume', function(data)
 end)
 
 RegisterNUICallback('Map', function(data)
-	CloseMenu()
-	ActivateFrontendMenu(GetHashKey('FE_MENU_VERSION_MP_PAUSE'),0,-1)
+    CloseMenu()
+    Wait(50)
+    ActivateFrontendMenu(GetHashKey('FE_MENU_VERSION_MP_PAUSE'),0,-1)
+    while not IsFrontendReadyForControl() do Wait(0) end
+    Wait(20)
+    PauseMenuceptionGoDeeper(1000)
+    DisplayRadar(true)
+    SetNuiFocus(false, false)
 end)
 
 RegisterNUICallback('Settings', function(data)
